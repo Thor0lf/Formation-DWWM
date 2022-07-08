@@ -1,0 +1,131 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	max-width: 1000px;
+	margin: 0 auto;
+	font-family: sans-serif;
+}
+
+
+ul li {
+	list-style-type: none;
+}
+
+ul li a {
+	text-decoration: none;
+}
+
+.banniere {
+	display: flex;
+	align-items: center;
+	height: 80px;
+}
+
+.logo {
+	display: flex;
+	width: 50%;
+}
+
+.logo img {
+	margin-left: 15px;
+}
+
+.menu {
+	display: flex;
+	width: 50%;
+}
+
+.menu ul {
+	display: flex;
+	width: 100%;
+	height: 80px;
+	justify-content: space-around;
+	align-items: center;
+	font-weight: bold;
+}
+
+.bouton-menu, .bouton-dkk, .bouton-panier {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+}
+
+.bouton-menu {
+	background-color: #d3d3d331;
+}
+
+.bouton-dkk {
+	background-color: #d3d3d390;
+}
+
+.bouton-panier {
+	background-color: #d3d3d3DE;
+}
+
+.contenu {
+	color: #ffffff;
+}
+
+.produits {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+}
+
+.premier, .quatrieme, .cinquieme {
+	background-color: #90eea65d;
+}
+
+.deuxieme, .troisieme, .sixieme {
+	background-color: #2984f47b;
+}
+
+h2 {
+	margin-left: 10%;
+	margin-bottom: 5%;
+}
+
+.pied {
+	display: flex;
+	align-items: center;
+	height: 80px;
+	width: 100%;
+}
+.infos {
+	width: 50%;
+}
+
+.infos ul {
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+}
+
+.paiement {
+	width: 50%;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+
+}
+
+.paiement ul {
+	display: flex;
+	margin-left: 15px;
+	justify-content: space-evenly;
+	width: 30%;
+}
+
+.paiement ul li {
+	color: white;
+	background-color: black;
+	border-radius: 10px;
+	padding: 5px;
+	margin: 0 2px;
+}
