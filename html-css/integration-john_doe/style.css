@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.bloc-1 {
+    width: 100%;
+    height: 800px;
+    background: url(home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bloc-1 figure img {
+    padding: 10% 15%;
+}
+
+h1 {
+    width: 40%;
+    padding: 1% 15%;
+    font-weight: 100;
+    font-size: 60px;
+}
+
+.bloc-1 p {
+    width: 40%;
+    padding: 0 15%;
+}
+
+.bloc-2, .bloc-3 {
+    width: 100%;
+    height: 400px;
+}
+
+.bloc-2 article, .bloc-3 article {
+    padding: 11%;
+}
+
+.bloc-2 p, .bloc-3 p{
+    padding-top: 2%;
+}
+
+.bloc-2 {
+    background: #d3d3d3;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.bloc-3 {
+    background: #fa8072;
+}

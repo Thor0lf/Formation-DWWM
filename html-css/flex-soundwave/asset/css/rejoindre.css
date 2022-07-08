@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #2f303a;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 125px;
+}
+
+header figure, header nav ul {
+    display: flex;
+    align-items: center;
+}
+
+header figure h1 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 10%;
+}
+
+header figure a:hover {
+    color: #3757b1;
+}
+
+header figure {
+    margin-left: 11%;
+}
+
+header nav {
+    width: 13%;
+    margin-right: 15%;
+}
+
+header nav ul {
+    list-style-type: none;
+
+}
+
+header nav ul li {
+    flex: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+header nav ul li a:hover{
+    color: #b83a81;
+}
+
+.container {
+    width: 100%;
+    height: 640px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container p {
+    font-size: 55px;
+    font-weight: bold;
+    margin-right: 10%;
+}
+
+strong {
+    color: #bc3a80;
+    font-weight: bolder;
+}
+
+.form {
+    width: 35%;
+    height: 70%;
+    background-color: #202027;
+    font-weight: bold;
+    padding: 1px 40px;
+    border-radius: 20px;
+}
+
+.label-1, .label-2 {
+    margin-bottom: 2%;
+}
+
+.label-1 {
+    margin-top: 5%;
+}
+
+.label-2 {
+    margin-top: 5%;
+}
+
+input {
+    background-color: transparent;
+    border: 2px solid #2e3852;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.submit {
+    margin-top: 30px;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    background: #1762a7;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.submit:hover {
+    background: #b83a81;
+    color: #000000;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 70px;
+    background: #202027;
+    font-weight: bold;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 70px;
+    background: #202027;
+    font-weight: bold;
+}
+
+.internal, .external {
+    display: flex;
+}
+
+.internal p, .external p {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.about:hover, .contact:hover {
+    color:#b83a81;
+    cursor: pointer;
+}
+
+.fa-brands {
+    margin-right: 10px;
+}
+
+.twitter:hover {
+    color: #00acee;
+    cursor: pointer;
+}
+
+.facebook:hover {
+    color: #3b5998;
+    cursor: pointer;
+}
+
+.circ-pink {
+    position: fixed;
+    bottom: 0px;
+    left: -100px;
+    background-color: #3d3141DA;
+    width: 500px;
+    height: 500px;
+    border-radius: 100%;
+    z-index: -1;
+}
+
+.circ-blue {
+    position: fixed;
+    top: -100px;
+    left: 200px;
+    background-color: #2f3446DA;
+    width: 450px;
+    height: 450px;
+    border-radius: 100%;
+    z-index: -1;
+}
+
+@media screen and (max-width: 900px) {
+
+    header {
+        justify-content: space-around;
+        font-size: 0.6rem;
+    }
+
+    header figure, header nav ul {
+        justify-content: center;
+    }
+
+    header figure {
+        margin-left: 0;
+    }
+
+    header nav {
+        margin-right: 0;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .container p {
+        margin: 5% auto;
+    }
+    .form {
+        width: 75%;
+    }
+    
+    .label-1, .label-2 {
+        margin-bottom: 2%;
+    }
+    
+    .label-1 {
+        margin-top: 5%;
+    }
+    
+    .label-2 {
+        margin-top: 5%;
+    }
+
+    .circ-pink {
+        visibility: hidden;
+    }
+    
+    .circ-blue {
+        visibility: hidden;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    
+    .container p {
+        font-size: 3rem;
+    }
+    
+    footer {
+        font-size: 0.73rem
+    };
+}
