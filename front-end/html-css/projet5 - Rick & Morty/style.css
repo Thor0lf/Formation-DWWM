@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Italianno&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    width: 90%;
+    margin: 0 auto;
+    background: #000000;
+    color: #ffffff;
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid #16acc9;
+    margin-bottom: .5rem;
+}
+
+header img {
+    width: 40%;
+}
+
+#character {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    gap: 10px;
+}
+
+.single-character {
+    border: 1px solid #16acc9;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #d2da4b;
+}
+
+.single-character img {
+    width: 40%;
+    float: left;
+    border-radius: 5px 0 0 5px;
+    padding-right: 5px;
+}
+
+h3 {
+    padding: 5px;
+    text-align: center;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background: #808080;
+    margin: 2px;
+}
+
+#status {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-block: 15px;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color:#16acc9;
+    text-decoration: none;
+    font-weight: bold;
+}

@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    width: 100%;
+    background-color: #dddddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    padding: 1rem;
+    color: #2870dc;
+}
+
+.container {
+    min-width: 50%;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#add-task-container {
+    width: 100%;
+    padding: 20px 10px;
+    background: #ffffff;
+    border-radius: .5rem;
+    box-shadow: 0 0 .2rem;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+input {
+    width: 100%;
+    flex: 1;
+    transition: .3s;
+    font-size: 1.2rem;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: .5rem;
+    color: #2870dc;
+    border: 2px solid #2870dc;
+}
+
+/* input:focus {
+    border: 2px solid #2870dc;
+} */
+
+#add-task {
+    width: 50px;
+    height: 50px;
+    transition: .3s;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    padding: 5px;
+    background-color: #ffffff;
+    border: 2px solid #2870dc;
+    border-radius: .5rem;
+    color: #2870dc;
+    cursor: pointer;
+}
+
+#add-task:hover {
+    background-color: #2870dc;
+    color: #ffffff;
+}
+
+#delete-task-all {
+    width: 50px;
+    height: 50px;
+    transition: .3s;
+    font-size: 1.2rem;
+    padding: 5px;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: .5rem;
+    color: #000000;
+    cursor: pointer;
+}
+
+#delete-task-all:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+/* Ci-dessous, les tâches qui seront ajoutés à la todo List */
+
+.task {
+    width: 100%;
+    background: #ffffff;
+    border-radius: .5rem;
+    box-shadow: 0 0 3px;
+    padding: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    word-wrap: break-word;
+    transition: .5s;
+    animation: fadein .75s;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.task li {
+    list-style-type: none;
+    flex: 4;
+    padding: 5px;
+    font-size: 1.3rem;
+    margin: 10px;
+}
+
+.task button {
+    width: 50px;
+    height: 50px;
+    border-radius: .5rem;
+    background: #ffffff;
+    cursor: pointer;
+ }
+
+#check-task {
+    color: orange;
+    margin-right: 5px;
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid #ffa500;
+    font-size: 1.5rem;
+}
+
+#check-task:hover {
+    color: #ffffff;
+    background: #ffa500;
+}
+
+#delete-task {
+    color: #ff0000;
+    border: 2px solid #ff0000;
+    margin: 5px;
+    padding: 5px;
+    font-size: 1.3rem;
+}
+
+#delete-task:hover {
+    color: #ffffff;
+    background: #ff0000;
+}
+
+.strike {
+    text-decoration: line-through;
+}
