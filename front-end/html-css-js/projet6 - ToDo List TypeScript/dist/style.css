@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@400;700&display=swap%27');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arima', cursive;
+}
+
+.container {
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 1.15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div button {
+    color: black;
+    border: .15rem solid black;
+    transition: all .3s ease;
+}
+
+div button:hover {
+    color: white;
+    background: black;
+}
+
+form {
+    padding-block: 1.25rem;
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem;
+    border-bottom: .3rem double #2870dc;
+}
+
+input[type='text'] {
+    width: 100%;
+    padding: .8rem;
+    border: .15rem solid #2870dc;
+    border-radius: .3rem;
+}
+
+input[type='checkbox'] {
+    margin-left: .6rem;
+    cursor: pointer;
+}
+
+button {
+    padding: .8rem;
+    border: .15rem solid #2870dc;
+    color: #2870dc;
+    border-radius: .3rem;
+    margin-left: .3rem;
+    cursor: pointer;
+}
+
+li input {
+    margin-right: .5rem;
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    width: 20rem;
+    word-break: break-word;
+    transition: .5s;
+    animation: fadein .75s;
+    margin-block: .5rem;
+    padding-bottom: 1rem;
+    border-bottom: .1rem solid #2870dc;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+ul li button {
+    color: red;
+    border: .15rem solid red;
+}
+
+ul li button:hover {
+    color: white;
+    background: red;
+    transition: all .3s ease;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form button {
+    color: #2870dc;
+    border: .15rem solid #2870dc;
+}
+
+form button:hover {
+    color: white;
+    background: #2870dc;
+    transition: all .3s ease;
+}
