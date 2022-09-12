@@ -1,0 +1,45 @@
+<!-- Condition ngIF pour afficher le bouton de chargement des départements -->
+<div class="text-center vertical-align">
+
+    <button
+  *ngIf="!departementsIsLoaded"
+  type="button"
+  class="btn
+btn-primary mx-auto"
+  (click)="loadDepartements.emit()"
+>
+  Charger les départements
+</button>
+</div>
+
+<!-- La balise 'ng-container' permet d'attendre de façon asynchrone le chargement des données -->
+<ng-container *ngIf="departementsIsLoaded">
+
+    <div>
+        <label for="search" class="form-label">Rechercher un département</label>
+        <input type="text" class="form-control" name="search" placeholder="Ex: Eure" [(ngModel)]="search" autocomplete="off">
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nom<fa-icon [icon]="faArrowUpL" (click)="nomDesc()"> </fa-icon><fa-icon [icon]="faArrowDownL" (click)="nomAsc()"> </fa-icon></th>
+                <th scope="col">Code<fa-icon [icon]="faArrowUp" (click)="codeDesc()"> </fa-icon><fa-icon [icon]="faArrowDown" (click)="codeAsc()"> </fa-icon></th>
+                <th scope="col">Code région<fa-icon [icon]="faArrowUp" (click)="regionDesc()"> </fa-icon><fa-icon [icon]="faArrowDown" (click)="regionAsc()"> </fa-icon></th>
+                <th scope="col">#</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let departement of getDepartements()">
+                <td>{{ departement.nom }}</td>
+                <td>{{ departement.code }}</td>
+                <td>{{ departement.codeRegion }}</td>
+                <td (click)="loadCommunes.emit(departement.code)"><fa-icon [icon]="faMagnifyingGlass"></fa-icon></td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <pagination class="pagination justify-content-center" [totalItems]="getLength()" [(ngModel)]="currentPage" [boundaryLinks]="true" firstText="Première page" lastText="Dernière page" previousText="Précédent" nextText="Suivant"></pagination>
+
+</ng-container>

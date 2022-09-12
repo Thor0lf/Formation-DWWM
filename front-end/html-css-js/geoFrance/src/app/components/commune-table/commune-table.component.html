@@ -1,0 +1,32 @@
+<ng-container *ngIf="communesIsLoaded">
+    <div>
+        <label for="search" class="form-label">Rechercher un département</label>
+        <input type="text" class="form-control" name="search" placeholder="Ex: Le Vaudreuil" [(ngModel)]="search" autocomplete="off">
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nom<fa-icon [icon]="faArrowUpL" (click)="codeDesc()"> </fa-icon><fa-icon [icon]="faArrowDownL" (click)="codeAsc()"> </fa-icon></th>
+                <th scope="col">Code</th>
+                <th scope="col">Code département</th>
+                <th scope="col">Code région</th>
+                <th scope="col">Code postal</th>
+                <th scope="col">Population<fa-icon [icon]="faArrowUp" (click)="communesDesc()"> </fa-icon><fa-icon [icon]="faArrowDown" (click)="communesAsc()"> </fa-icon></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let commune of getCommunes()">
+                <td>{{ commune.nom }}</td>
+                <td>{{ commune.code }}</td>
+                <td>{{ commune.codeDepartement }}</td>
+                <td>{{ commune.codeRegion }}</td>
+                <td>{{ commune.codesPostaux }}</td>
+                <td>{{ commune.population }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <pagination class="pagination justify-content-center text-secondary" [maxSize]="20" [rotate]="true" [boundaryLinks]="true" [totalItems]="getLengthCommune()" [(ngModel)]="currentPage" firstText="Première page" previousText="Précédent" nextText="Suivant" lastText="Dernière page"></pagination>
+
+</ng-container>
